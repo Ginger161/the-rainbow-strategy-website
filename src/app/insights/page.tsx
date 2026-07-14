@@ -55,12 +55,12 @@ export default function InsightsPage() {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen bg-slate-50 font-sans selection:bg-blue-100 selection:text-slate-900">
+    <div className="flex flex-col w-full flex-grow">
       
       {/* 1. Global Navigation */}
       <Navbar onOpenWizard={() => setIsWizardOpen(true)} />
 
-      <main className="w-full flex-grow relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50/30">
+      <main className="w-full flex-grow relative overflow-hidden bg-gradient-to-br from-slate-50/50 via-white/50 to-blue-50/30">
         
         {/* Action 1: Hero Section */}
         <section className="relative pt-32 pb-16 px-6 max-w-4xl mx-auto flex flex-col items-center text-center">

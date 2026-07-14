@@ -30,12 +30,12 @@ export default function AboutPage() {
   });
 
   return (
-    <div className="flex flex-col min-h-screen bg-slate-50 font-sans selection:bg-blue-100 selection:text-slate-900">
+    <div className="flex flex-col w-full flex-grow">
       
       {/* 1. Global Navigation */}
       <Navbar onOpenWizard={() => setIsWizardOpen(true)} />
 
-      <main className="w-full flex-grow relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50/30">
+      <main className="w-full flex-grow relative overflow-hidden bg-gradient-to-br from-slate-50/50 via-white/50 to-blue-50/30">
         
         {/* Section 1: The Hero Section */}
         <section className="relative pt-20 pb-20 px-6 md:px-12 max-w-7xl mx-auto flex flex-col items-center text-center">

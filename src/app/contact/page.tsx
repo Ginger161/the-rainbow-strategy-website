@@ -45,15 +45,10 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 selection:bg-blue-100 selection:text-blue-900 font-sans">
+    <div className="flex flex-col w-full flex-grow">
       <Navbar onOpenWizard={() => setIsWizardOpen(true)} />
 
-      <main className="relative bg-gradient-to-br from-slate-50 via-white to-blue-50/30 pt-32 pb-24 overflow-hidden min-h-screen">
-        {/* Background blobs */}
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
-          <div className="absolute -top-40 -right-40 w-[800px] h-[800px] rounded-full bg-blue-50/50 blur-3xl opacity-70"></div>
-          <div className="absolute top-40 -left-20 w-[600px] h-[600px] rounded-full bg-slate-100/80 blur-3xl opacity-70"></div>
-        </div>
+      <main className="relative bg-gradient-to-br from-slate-50/50 via-white/50 to-blue-50/30 pt-32 pb-24 overflow-hidden min-h-screen">
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           
