@@ -47,7 +47,7 @@ export default function Navbar({ onOpenWizard }: { onOpenWizard: () => void }) {
           <Link href="/about" className={getLinkClass("/about")}>About</Link>
           <Link href="/practice-areas" className={getLinkClass("/practice-areas")}>Practice Areas</Link>
           <Link href="/insights" className={getLinkClass("/insights")}>Insights</Link>
-          <Link href="/#portal" className={getLinkClass("/#portal")}>Client Portal</Link>
+          <Link href="/contact" className={getLinkClass("/contact")}>Contact</Link>
         </nav>
 
         {/* Right Area: CTA & Mobile Menu Toggle */}
@@ -80,7 +80,7 @@ export default function Navbar({ onOpenWizard }: { onOpenWizard: () => void }) {
               <Link href="/about" className={getMobileLinkClass("/about")} onClick={() => setIsMobileMenuOpen(false)}>About</Link>
               <Link href="/practice-areas" className={getMobileLinkClass("/practice-areas")} onClick={() => setIsMobileMenuOpen(false)}>Practice Areas</Link>
               <Link href="/insights" className={getMobileLinkClass("/insights")} onClick={() => setIsMobileMenuOpen(false)}>Insights</Link>
-              <Link href="/#portal" className={getMobileLinkClass("/#portal")} onClick={() => setIsMobileMenuOpen(false)}>Client Portal</Link>
+              <Link href="/contact" className={getMobileLinkClass("/contact")} onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
               <div className="pt-4 mt-2 border-t border-slate-100">
                 <button 
                   onClick={() => {

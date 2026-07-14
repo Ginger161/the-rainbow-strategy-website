@@ -17,6 +17,7 @@ import {
   X
 } from "lucide-react";
 import ComplianceWizard from "@/components/ComplianceWizard";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -69,70 +70,7 @@ export default function Home() {
       </div>
 
       {/* 1. Global Header */}
-      <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/90 backdrop-blur-md">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-8">
-          
-          {/* Logo Area */}
-          <div className="flex items-center gap-3">
-            <Image 
-              src="/logo.JPG" 
-              alt="The Rainbow Strategy Logo" 
-              width={180} 
-              height={60} 
-              className="h-10 w-auto object-contain"
-            />
-          </div>
-          
-          {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex gap-8 text-sm font-semibold text-slate-600">
-            <Link href="/about" className="hover:text-blue-700 transition-colors">About</Link>
-            <a href="#practice-areas" className="hover:text-blue-700 transition-colors">Practice Areas</a>
-            <a href="#insights" className="hover:text-blue-700 transition-colors">Insights</a>
-            <a href="#portal" className="hover:text-blue-700 transition-colors">Client Portal</a>
-          </nav>
-
-          {/* Right Area: CTA & Mobile Menu Toggle */}
-          <div className="flex items-center gap-4">
-            <button 
-              onClick={() => setIsWizardOpen(true)}
-              className="hidden md:block rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-800 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700"
-            >
-              Run AI Compliance Check
-            </button>
-            <button 
-              className="md:hidden p-2 text-slate-600 hover:text-slate-900"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            >
-              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Menu Dropdown */}
-        <AnimatePresence>
-          {isMobileMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              className="md:hidden border-t border-slate-200 bg-white"
-            >
-              <div className="flex flex-col px-4 py-4 space-y-4">
-                <Link href="/about" className="text-base font-medium text-slate-600 hover:text-blue-700">About</Link>
-                <a href="#practice-areas" className="text-base font-medium text-slate-600 hover:text-blue-700">Practice Areas</a>
-                <a href="#insights" className="text-base font-medium text-slate-600 hover:text-blue-700">Insights</a>
-                <a href="#portal" className="text-base font-medium text-slate-600 hover:text-blue-700">Client Portal</a>
-                <button 
-                  onClick={() => setIsWizardOpen(true)}
-                  className="w-full rounded-lg bg-blue-700 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-800"
-                >
-                  Run AI Compliance Check
-                </button>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </header>
+      <Navbar onOpenWizard={() => setIsWizardOpen(true)} />
 
       {/* 2. The Asymmetric Hero Section */}
       <main className="relative flex-grow flex items-center pt-12 pb-20 md:pt-24 md:pb-32 overflow-hidden">
