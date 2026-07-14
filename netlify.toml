@@ -1,0 +1,7 @@
+[build]
+  base = "rainbow-app"
+  command = "npm install && npm run build"
+  publish = "rainbow-app/.next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
