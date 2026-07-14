@@ -102,7 +102,10 @@ export default function ComplianceWizard({ isOpen, onClose }: ComplianceWizardPr
     const opt = {
       margin: 10,
       filename: filename,
-      image: { type: 'jpeg', quality: 0.98 },
+      image: { 
+        type: 'jpeg' as 'jpeg' | 'png' | 'webp', 
+        quality: 0.98 
+      },
       html2canvas: { scale: 2 },
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
     };
